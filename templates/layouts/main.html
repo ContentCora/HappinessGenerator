@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/static/lib/skeleton/normalize.css" />
+    <link rel="stylesheet" href="/static/lib/skeleton/skeleton.css" />
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<header>
+    <h1>The Happiness Generator</h1>
+</header>
+<body>
+    <div class="container">
+        <!-- Content placeholder, for different content on all pages -->
+        {% block content %}{% endblock %}
+    </div>
+    <footer>
+        <div class="container">
+            <!-- Basic navigation to be used in the footer of all pages -->
+            <ul class="navigation">
+                <li class="navigation-item">
+                    <a href="/">Start</a>
+                </li>
+                <li class="navigation-item">
+                    <a href="/list">Entire list of happiness</a>
+                </li>
+                <li class="navigation-item">
+                    <a href="/random">Show random</a>
+                </li>
+            </ul>
+        </div> 
+        <div>
+          <p>Written by Cora Egli for EPFL Extension School, 2020</p>  
+        </div> 
+    </footer>
+</body>
+</html>
