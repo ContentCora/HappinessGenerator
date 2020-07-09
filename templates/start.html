@@ -1,10 +1,29 @@
+<!-- This structure is to be used as a default page (start) as well as for any random happiness item. It might not be necessary to have a random.html page at all. -->
 {% extends "layouts/main.html" %}
 
 {% block content %}
-
-    <h2>Happiness Item xy</h2>
 <div class="container">
-    <!-- One happiness item presented at random -->
+    <div class="row">
+        <div class="two-thirds column">
+        <h3 class="green">Happiness Item zzz (Number)</h3>
+            <!-- A happiness item presented at random -->
+            <h3 class="box">$$HAPPINESSITEM$$</h3>
+            <div class="buttons">
+                <!-- Buttons "Find another" and "See entire list"-->
+                <a href="/random"><button>Find another</button></a>
+                <a href="/list"><button class="button-primary">See entire list</button></a>
+            </div>
+        </div>
+   
+        <div class="one-third column">
+            <p>Did you like this input? Spread the happiness!</p>
+            <p>Share on Twitter</p>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="This happiness input gave me joy. Want to have a go too?" data-via="CoraEgli" data-hashtags="happinessgenerator" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <p>Share on WhatsApp</p>
+            <p>Share on Facebook</p>
+        </div>
+    </div>
+
 </div>
 
 {% endblock %}
