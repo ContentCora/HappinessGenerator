@@ -18,13 +18,15 @@ def start():
                                             metadescription="This app lets you look for Happiness Items and add to the list yourself. This Happiness Item was randomly selected from a list. I hope it brings you joy.", 
                                             HAPPINESSITEM="Hello there!")
 
-@app.route("/hi_list")
+@app.route("/list")
 def entire_list():
     hi_list = get_hi()
     hi_values = "" # hi_values = happiness item values
-    for item in hitems:
-        #put each HI (hitems) into one separate paragraph
-       hi_values += "<p>" + hitems + "<p>"
+    for item in hi_list:
+        #put each HI (hi_list) into one separate paragraph
+        #hi_values += item + "\n"
+        hi_values += "<p>" + item + "</p>"
+    print(hi_values)
     return render_template("list.html", title="All Happiness Items, united",
                                             metadescription="This is the complete list of Happiness Items. You can add to the list or edit existing items. Enjoy!", 
-                                            happiness="Hi! Here's your list")                               
+                                            happiness=hi_values)                               
