@@ -6,11 +6,16 @@
     <h2>Create & customize your own list of happiness</h2>
     <!-- List of all Happiness Items, displayed neutrally, plus editing possibilities -->
     <div>
+        <!--Form to add another HI -->
+        <form method="get">
+            <input type="text" id="item" name="item" placeholder="Share another happiness item">
+            <input type="submit" id="add" value="Add item">
+        </form>   
    <!-- An elegant loop to put each happiness item into a <p> with class=box.-->     
    {% for element in happiness %}
    <p class="box">{{element}}</p>
    {% endfor %}
     </div>
 </div>
-
+ 
 {% endblock %}
